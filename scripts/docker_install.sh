@@ -13,5 +13,5 @@ $DOCKER_COMPOSE -f docker-compose.yml up -d
 
 echo -e "\033[32m\033[1mInstallation complete\033[0m, you can now access the container with the following command:"
 echo "chmod -R 777 inmoov_ros_sim && \\"
-echo "cd inmoov_ros_sim && \\"
-echo "make dc-term"
+echo "    cd inmoov_ros_sim && \\"
+echo "    make dc-term"

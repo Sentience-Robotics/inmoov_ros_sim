@@ -24,6 +24,15 @@ The simulator is shipped in a ROS 2 - ready to use - package
 
 ---
 
+## Requirements
+
+- Ubuntu 22.04 or docker
+- WSL (on windows)
+- VNC Client
+- Make (not mandatory but strongly recommended)
+
+---
+
 ## 📥 Installation
 
 Execute the installation script
@@ -32,9 +41,37 @@ Execute the installation script
 curl -fsSL https://raw.githubusercontent.com/Sentience-Robotics/inmoov_ros_sim/refs/heads/mbo/%232/inmoov-ros-sim-repo/scripts/install.sh | bash
 ```
 
+### On docker
+
+When your installation is complete, execute the following commands
+
+```bash
+chmod -R 777 inmoov_ros_sim && \
+    cd inmoov_ros_sim && \
+    make dc-term
+```
+
 ---
 
-## ⚙️ Compilation
+## Usage
+
+### Makefile
+
+Available commands:
+-  help:       Show this help message
+-  dc-up:      Create and start containers
+-  dc-down:    Stop and remove containers
+-  dc-reup:    Recreate containers
+-  dc-start:   Start containers
+-  dc-stop:    Stop containers
+-  dc-restart: Restart containers
+-  dc-term:    Open a terminal in the container
+-  dc-logs:    View output from containers
+-  ros-build:  Build ROS2 workspace
+-  ros-run:    Run ROS2 launch file
+-  ros-clean:  Clean ROS2 workspace
+
+### ⚙️ Compilation
 
 Build the package
 
@@ -43,18 +80,12 @@ make ros-build
 
 ```
 Source your workspace
-> On bash
+
 ```bash
 source ./install/local_setup.bash
 ```
-> On zsh
-```zsh
-source ./install/local_setup.zsh
-```
 
----
-
-## 🖥️ Display (for docker)
+### 🖥️ Display (for docker)
 
 Install a vnc client (you can use remmina, vncviewer, etc)
 
@@ -72,9 +103,7 @@ Host: `127.0.0.1:1`
 
 Password: `abc123`
 
----
-
-## 🚀 Launch the package
+### 🚀 Launch the package
 
 ```bash
 make ros-run

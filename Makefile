@@ -5,6 +5,7 @@ help:
 	@echo "  help:       Show this help message"
 	@echo "  dc-up:      Create and start containers"
 	@echo "  dc-down:    Stop and remove containers"
+	@echo "  dc-reup:    Recreate containers"
 	@echo "  dc-start:   Start containers"
 	@echo "  dc-stop:    Stop containers"
 	@echo "  dc-restart: Restart containers"
@@ -19,6 +20,10 @@ dc-up:
 
 dc-down:
 	$(DOCKER_COMPOSE) down
+
+dc-reup:
+	$(DOCKER_COMPOSE) down
+	$(DOCKER_COMPOSE) up -d
 
 dc-start:
 	$(DOCKER_COMPOSE) start
