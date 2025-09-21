@@ -172,9 +172,23 @@ To find out more on how you can contribute to the project, please check our [CON
 
 ---
 
-## 📜 License
+## 📜 License and Attribution
 
-This project is licensed under the GNU GPL V3 License. See the LICENSE file for details.
+### Project License
+
+- **Original project code/files:** GNU GPL V3 License
+- **InMoov-derived files:** CC BY-NC 4.0 (as specified below)
+ 
+See the [LICENSE](LICENSE) file for details.
+
+### InMoov-Derived Components
+
+Parts of this project that are derived from InMoov files (including Blender models, CAD files, and STL files) are based on the original work by **Gael Langevin**.
+
+**Original Work:** InMoov by Gael Langevin  
+**License:** [Creative Commons Attribution-NonCommercial (CC BY-NC)](https://creativecommons.org/licenses/by-nc/4.0/)  
+**Source:** http://inmoov.fr/  
+**Applies to:** Blender files, CAD files, STL files, and other 3D models derived from InMoov
 
 ---
 
